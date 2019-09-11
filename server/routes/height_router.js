@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const Height = require('../models/heightSteam');
+const Height = require('../models/heightEstimate');
 
 router.get('/', (req, res) => {
     res.send('Es para altura');
