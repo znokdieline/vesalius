@@ -12,7 +12,7 @@ Este proyecto fue una excusa para poder trabajar en con React Native y explorar 
 
 Se aplicaron ecuaciones reales para la estimación de altura en pobaciones prehispánicas. además de estimación de sexo por medio de marcadores en el cráneo; glabela, margen supraorbital, cresta nucal, mastoideo y mentón. 
 
-Es necesario aclara que son estimaciones con un alto grado de error y en algunos caso depende de la apreciación particular de quien opere la aplicación (cráenao), pero busca ayudar en mejorar tiempos y procesos.
+Es necesario aclara que son estimaciones con un alto grado de error y en algunos caso depende de la apreciación particular de quien opere la aplicación (cráneo), pero busca ayudar en mejorar tiempos y procesos.
 
 <br>
 <img src="https://namuhyou.files.wordpress.com/2016/06/scoring20cranial20features.jpg?w=1180">
