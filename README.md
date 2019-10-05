@@ -1,7 +1,7 @@
 
 <img src="https://github.com/znokdieline/vesalius/blob/master/client/resources/images/vesalius-07.png">
 
-<strong>Andreas Vesalius </strong> publicó el primer tratado de anatomía en <strong>1543</strong>, en su honor he desarrollado una plaicación en <strong>React Native</strong> como proyecto final.
+<strong>Andreas Vesalius </strong> publicó el primer tratado de anatomía en <strong>1543</strong>, en su honor he desarrollado una aplicación en <strong>React Native</strong> como proyecto final.
 
 Para esta primera parte del desarrollo, <strong>Vesalius</strong> es capaz de estimar <strong>altura</strong> en restos por<strong> tibia y femur</strong>. Además es capaz de <strong>estimar sexo</strong> por medio de cráneo, mediante cinco marcadores.
 
