@@ -3,8 +3,12 @@ const router = express.Router();
 
 const Height = require('../models/heightEstimate');
 
+
 router.get('/', (req, res) => {
-    res.send('Es para altura');
+    Height.find()
+    .then(height => {
+        res.json(height)
+    }).catch(error => console.log(error))
 });
 
 router.post('/', (req, res) => {

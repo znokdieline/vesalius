@@ -5,7 +5,10 @@ const router = express.Router();
 const BurialCollection = require('../models/burialCollection');
 
 router.get('/', (req, res) => {
-    res.send('Es para coleccion');
+    BurialCollection.find()
+    .then(burialCollection => {
+        res.json(burialCollection)
+    }).catch(error => console.log(error))
 });
 
 router.post('/', (req, res) => {

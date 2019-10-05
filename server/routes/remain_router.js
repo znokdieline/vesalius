@@ -3,11 +3,15 @@ const router = express.Router();
 
 const Remain = require('../models/remain');
 
+
 router.get('/', (req, res) => {
-    res.send('es para restos')
+    Remain.find()
+    .then(remain => {
+        res.json(remain)
+    }).catch(error => console.log(error))
 });
 
-router.post('/remain', (req, res) => {
+router.post('/', (req, res) => {
     const { burialCollection, burial, number, classOf, kind, shape, variety, orientation, location, description } = req.body;
 
     Remain.create({
@@ -29,5 +33,6 @@ router.post('/remain', (req, res) => {
         console.log(error);
     })
 });
+
 
 module.exports = router;

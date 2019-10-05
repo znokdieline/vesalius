@@ -5,14 +5,16 @@ const Skull = require('../models/skull');
 
 
 router.get('/', (req, res) => {
-    res.send('Es para craneo')
+    Skull.find()
+        .then(skull => {
+            res.json(skull)
+        }).catch(err => console.log(err))
 });
 
-
-router.post('/skull',(req, res) => {
+router.post('/', (req, res) => {
     const { burialCollection, burial, nuchalCrest, mastoidProcess, supraOrbitalMargin, supraOrbitalGlabella, mentalEminence, description } = req.body;
 
-    Skull.create({
+    const skull = new Skull({
         burialCollection,
         burial,
         nuchalCrest,
@@ -20,11 +22,12 @@ router.post('/skull',(req, res) => {
         supraOrbitalMargin,
         supraOrbitalGlabella,
         mentalEminence,
-        description,
-        User
-    })
-    .then(() => {
-        res.redirect('/');
+        description
+        });
+
+    skull.save()
+    .then(data => {
+        res.json(data)
     })
     .catch(error => {
         console.log(error);

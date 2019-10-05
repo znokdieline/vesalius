@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const  Schema  = mongoose.Schema;
 
-const UserSchema = new Schema(
-    {
-        userPhoto: {
+const UserSchema = new Schema({
+        
+    userPhoto: {
             type: String,
         },
         firstName:{
@@ -18,7 +18,7 @@ const UserSchema = new Schema(
             type: String,
             required: false
         },
-        userName: {
+        username: {
             type: String,
             required: false
         },
@@ -42,11 +42,14 @@ const UserSchema = new Schema(
             type: String,
             required:false
         },
-        skull: {
+        skull: [{
             // aquí se referencía el archivo de SkullSchema para usuario
             type: Schema.Types.ObjectId,
             ref: 'Skull'
-        }
+        }],
+        tasks: [{type: Schema.Types.ObjectId, ref: 'Task'}],
+        owner: [{type: Schema.Types.ObjectId, ref: 'User'}],
+
     }, {
         timestamps: true
     }
